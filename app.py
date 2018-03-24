@@ -18,16 +18,19 @@ class TemplateHandler(tornado.web.RequestHandler):
     self.write(template.render(**context))
 
 class MainHandler(TemplateHandler):
-  def get(self):
+  def get(self, page='hobbies'):
+    page = page + '.html'
     self.set_header(
       'Cache-Control',
       'no-store, no-cache, must-revalidate, max-age=0')
-    self.render_template("hobbies.html", {})
+    self.render_template(page, {'name': 'Nelson'})
 
     
 def make_app():
   return tornado.web.Application([
     (r"/", MainHandler),
+    (r"/(portfolio)", MainHandler),
+    (r"/(contact)", MainHandler),
     (
       r"/static/(.*)",
       tornado.web.StaticFileHandler,
