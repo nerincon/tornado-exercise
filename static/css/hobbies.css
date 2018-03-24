@@ -1,0 +1,122 @@
+body {
+    font-family: 'Itim', cursive;
+}
+
+.jumbotron{
+    margin-top: 500px;
+    padding-top: 5%;
+    background-color: white;
+    position: relative;
+}
+
+.col-8{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#hob {
+    margin-top: 5%;
+}
+
+.title {
+    text-align: center;
+}
+
+.center{
+    padding-right: 35%;
+}
+
+.nav-item {
+  background-color: white;
+}
+
+.navbar-collapse {
+  position:absolute;
+  top:48px;
+  width: 100px;
+  background-color: white;
+}
+
+.slideshow { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .slideshow li { 
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 90s linear infinite; 
+  }
+  
+  .slideshow li:nth-child(1) { 
+    background-image: url(./image1.jpeg)
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(./image2.jpg);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(./image3.jpg);
+    animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(./image4.jpg);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(./image5.jpg);
+    animation-delay: 40s; 
+  }
+
+  .slideshow li:nth-child(6) { 
+    background-image: url(./image6.jpeg); 
+    animation-delay: 50s;
+  }
+  .slideshow li:nth-child(7) { 
+    background-image: url(./image7.jpg);
+    animation-delay: 60s; 
+  }
+  .slideshow li:nth-child(8) { 
+    background-image: url(./image8.jpg);
+    animation-delay: 70s; 
+  }
+  .slideshow li:nth-child(9) { 
+    background-image: url(./image9.jpg);
+    animation-delay: 80s; 
+  }
+  .slideshow li:nth-child(10) { 
+    background-image: url(./image10.png);
+    animation-delay: 90s; 
+  }
+  
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
