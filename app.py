@@ -2,6 +2,8 @@ import tornado.ioloop
 import tornado.web
 import tornado.log
 
+import os
+
 from jinja2 import \
   Environment, PackageLoader, select_autoescape
 
@@ -29,7 +31,7 @@ def make_app():
     (
       r"/static/(.*)",
       tornado.web.StaticFileHandler,
-      {'path': 'myapp/static'}
+      {'path': 'static'}
     ),
   ], autoreload=True)
   
@@ -37,5 +39,6 @@ if __name__ == "__main__":
   tornado.log.enable_pretty_logging()
   
   app = make_app()
-  app.listen(8000)
+  PORT = int(os.environ.get('PORT', '8000'))
+  app.listen(PORT)
   tornado.ioloop.IOLoop.current().start()
