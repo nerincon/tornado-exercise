@@ -27,9 +27,9 @@ def make_app():
   return tornado.web.Application([
     (r"/", MainHandler),
     (
-      r"/static(.*)",
+      r"/static/(.*)",
       tornado.web.StaticFileHandler,
-      {'path': 'static'}
+      {'path': 'myapp/static'}
     ),
   ], autoreload=True)
   
@@ -37,5 +37,5 @@ if __name__ == "__main__":
   tornado.log.enable_pretty_logging()
   
   app = make_app()
-  app.listen(8888)
+  app.listen(8000)
   tornado.ioloop.IOLoop.current().start()
