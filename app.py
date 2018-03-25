@@ -23,7 +23,7 @@ class MainHandler(TemplateHandler):
     self.set_header(
       'Cache-Control',
       'no-store, no-cache, must-revalidate, max-age=0')
-    self.render_template(page, {'name': 'Nelson'})
+    self.render_template(page, {})
 
     
 def make_app():
