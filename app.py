@@ -18,7 +18,7 @@ class TemplateHandler(tornado.web.RequestHandler):
     self.write(template.render(**context))
 
 class MainHandler(TemplateHandler):
-  def get(self, page='hobbies'):
+  def get(self, page='index'):
     page = page + '.html'
     self.set_header(
       'Cache-Control',
@@ -29,6 +29,7 @@ class MainHandler(TemplateHandler):
 def make_app():
   return tornado.web.Application([
     (r"/", MainHandler),
+    (r"/(hobbies)", MainHandler),
     (r"/(portfolio)", MainHandler),
     (r"/(contact)", MainHandler),
     (

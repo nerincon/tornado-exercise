@@ -2,6 +2,22 @@ body {
     font-family: 'Itim', cursive;
 }
 
+#w1 {
+  color: white;
+}
+
+#w2 {
+  color: white;
+}
+
+#w3 {
+  color: white;
+}
+
+#w4 {
+  color: white;
+}
+
 .jumbotron{
     margin-top: 420px;
     padding-top: 5%;
@@ -30,11 +46,12 @@ body {
   color: white;
 }
 
+
 .slideshow { 
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -40px;
+    top: -42px;
     left: 0;
     z-index: -1;
     list-style: none;
