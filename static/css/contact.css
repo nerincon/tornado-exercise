@@ -1,0 +1,33 @@
+body {
+    font-family: 'Indie Flower', cursive;
+}
+
+
+img {
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    margin: 0;
+    padding: 0;
+    top:55px;
+    right: 0;
+    left:0;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+
+.wrapper {
+    margin-top: 8%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: 'Indie Flower', cursive;
+}
+
+#head {
+    color: white;
+    font-family: 'Indie Flower', cursive;
+}

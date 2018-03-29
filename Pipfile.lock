@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "514fd1afc111b4b96e5cf38771f95ecc24e939e68b47bec087972582da75fc3c"
+            "sha256": "b09b4941ccc0f50e66d490aff7e49a80e1ee322db5929aab9f055a371ad1bf03"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -21,11 +21,33 @@
             ],
             "version": "==1.6.2"
         },
+        "boto3": {
+            "hashes": [
+                "sha256:0a8f271a21be3ac91ff50de6f3146131d8ab2a37d0209dfca3e7caadf8315abb",
+                "sha256:bad2282138d8b656f9acb172dd8fd9c0704839fa6338bda440b4ccfe9cef014d"
+            ],
+            "version": "==1.6.18"
+        },
+        "botocore": {
+            "hashes": [
+                "sha256:254803eaca91bf28fa277641039bc06d335faa638862b54454170600a9ed0b5c",
+                "sha256:380272df75f6ee23a18c6b87ab3ad31b91f3c8bf17cc5d0d733a0a0ee72c2c3b"
+            ],
+            "version": "==1.9.18"
+        },
+        "docutils": {
+            "hashes": [
+                "sha256:02aec4bd92ab067f6ff27a38a38a41173bf01bed8f89157768c1573f53e474a6",
+                "sha256:51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274"
+            ],
+            "version": "==0.14"
+        },
         "isort": {
             "hashes": [
                 "sha256:1153601da39a25b14ddc54955dbbacbb6b2d19135386699e2ad58517953b34af",
                 "sha256:b9c40e9750f3d77e6e4d441d8b0266cf555e7cdabdcff33c4fd06366ca761ef8"
             ],
+            "markers": "python_version == '>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*'",
             "version": "==4.3.4"
         },
         "jinja2": {
@@ -34,6 +56,13 @@
                 "sha256:f84be1bb0040caca4cea721fcbbbbd61f9be9464ca236387158b0feea01914a4"
             ],
             "version": "==2.10"
+        },
+        "jmespath": {
+            "hashes": [
+                "sha256:6a81d4c9aa62caf061cb517b4d9ad1dd300374cd4706997aff9cd6aedd61fc64",
+                "sha256:f11b4461f425740a1d908e9a3f7365c3d2e569f6ca68a2ff8bc5bcd9676edd63"
+            ],
+            "version": "==0.9.3"
         },
         "lazy-object-proxy": {
             "hashes": [
@@ -61,6 +90,20 @@
                 "sha256:c77311859e0c2d7932095f30d2b1bfdc4b6fe111f534450ba727a52eae330ef2"
             ],
             "version": "==1.8.3"
+        },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:891c38b2a02f5bb1be3e4793866c8df49c7d19baabf9c1bad62547e0b4866aca",
+                "sha256:95511bae634d69bc7329ba55e646499a842bc4ec342ad54a8cdb65645a0aad3c"
+            ],
+            "version": "==2.6.1"
+        },
+        "s3transfer": {
+            "hashes": [
+                "sha256:90dc18e028989c609146e241ea153250be451e05ecc0c2832565231dacdf59c1",
+                "sha256:c7a9ec356982d5e9ab2d4b46391a7d6a950e2b04c472419f5fdec70cc0ada72f"
+            ],
+            "version": "==0.1.13"
         },
         "six": {
             "hashes": [
