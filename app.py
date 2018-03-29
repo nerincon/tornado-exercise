@@ -3,6 +3,32 @@ import tornado.web
 import tornado.log
 
 import os
+import boto3
+
+client = boto3.client(
+  'ses',
+  region_name='us-east-1',
+  aws_access_key_id=os.environ.get('AWS_ACCESS_KEY'),
+  aws_secret_access_key=os.environ.get('AWS_SECRET_KEY')
+)
+
+
+def send_email(email, message):
+    response = client.send_email(
+    Destination={
+        'ToAddresses': ['nerincon1@gmail.com'],
+    },
+    Message={
+        'Body': {
+        'Text': {
+            'Charset': 'UTF-8',
+            'Data': 'TEST:{}'.format(message),
+        },
+        },
+        'Subject': {'Charset': 'UTF-8', 'Data': 'Test email'},
+    },
+    Source='mailer@neutron.education',
+    )
 
 
 from jinja2 import \
@@ -26,13 +52,37 @@ class MainHandler(TemplateHandler):
       'no-store, no-cache, must-revalidate, max-age=0')
     self.render_template(page, {})
 
+class SuccessHandler(TemplateHandler):
+  def get(self):
+    self.set_header(
+      'Cache-Control',
+      'no-store, no-cache, must-revalidate, max-age=0')
+    self.render_template("contact.html", {})
+
+  def post (self):
+    email = self.get_body_argument('email', None)
+    message = self.get_body_argument('message', None)
+    error = ''
+    if email:
+      print('EMAIL:', email)
+      send_email(email, message)
+      self.redirect('/contact-success.html')
+      
+    else:
+      error = 'Please fill in your email in the email box'
+    self.set_header(
+      'Cache-Control',
+      'no-store, no-cache, must-revalidate, max-age=0')
+    self.render_template("contact.html", {'error': error})
+
     
 def make_app():
   return tornado.web.Application([
     (r"/", MainHandler),
     (r"/(hobbies)", MainHandler),
     (r"/(portfolio)", MainHandler),
-    (r"/(contact)", MainHandler),
+    (r"/(contact-success)", MainHandler),
+    (r"/contact", SuccessHandler),
     (
       r"/static/(.*)",
       tornado.web.StaticFileHandler,

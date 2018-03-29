@@ -11,6 +11,7 @@ tornado = "*"
 pylint = "*"
 "jinja2" = "*"
 "boto3" = "*"
+ipython = "*"
 
 
 [dev-packages]
