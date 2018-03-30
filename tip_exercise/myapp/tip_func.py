@@ -12,5 +12,4 @@ def get_tip():
     print("Tip Amount: ${:.2f}".format(total_tip))
     print("Total Amount: ${:.2f}".format(bill + total_tip))
 
-
 get_tip()
