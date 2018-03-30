@@ -4,6 +4,7 @@ function tipCalculate (){
     var service = document.getElementById('service').value;
     var bill = document.getElementById('bill').value;
     
+    
     if (bill == null || bill == '') {
       totaltip.innerHTML = 'Please enter an amount';
       return false;
