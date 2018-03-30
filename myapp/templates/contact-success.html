@@ -1,1 +1,17 @@
-You Just Sent an Email!!
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<title>
+    {% block title %}
+    Contact/Message Sent
+    {% endblock %}
+</title>
+{% endblock %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3">YOU JUST SENT ME A MESSAGE. AWESOME!</h1>
+      <p class="lead">I'll get back to you as soon as possible</p>
+    </div>
+  </div>
+{% endblock %}

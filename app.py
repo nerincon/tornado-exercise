@@ -13,7 +13,7 @@ client = boto3.client(
 )
 
 
-def send_email(email, message):
+def send_email(name,email, message):
     response = client.send_email(
     Destination={
         'ToAddresses': ['nerincon1@gmail.com'],
@@ -22,12 +22,12 @@ def send_email(email, message):
         'Body': {
         'Text': {
             'Charset': 'UTF-8',
-            'Data': 'TEST:{}'.format(message),
+            'Data': ('Sender Name: {}\n''Email from sender:{}\n''Message from Sender:{}'.format(name,email,message))
         },
         },
         'Subject': {'Charset': 'UTF-8', 'Data': 'Test email'},
     },
-    Source='mailer@neutron.education',
+    Source='nerincon1@gmail.com',
     )
 
 
@@ -60,13 +60,14 @@ class SuccessHandler(TemplateHandler):
     self.render_template("contact.html", {})
 
   def post (self):
+    name = self.get_body_argument('name', None)
     email = self.get_body_argument('email', None)
     message = self.get_body_argument('message', None)
     error = ''
     if email:
-      print('EMAIL:', email)
-      send_email(email, message)
-      self.redirect('/contact-success.html')
+      print('Name:',name , 'EMAIL:', email)
+      send_email(name, email, message)
+      self.redirect('/contact-success')
       
     else:
       error = 'Please fill in your email in the email box'
