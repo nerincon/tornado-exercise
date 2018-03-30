@@ -21,17 +21,16 @@ class MainHandler(TemplateHandler):
     self.set_header(
       'Cache-Control',
       'no-store, no-cache, must-revalidate, max-age=0')
-    service_type = {"bad":0.1, "fair":0.15, "good":0.2}
-    bill = self.get_query_argument('bill', '0')
-    bill = float(bill)
-    service = self.get_query_argument('service', 'good')
-    tip_type = service_type.get(service)
-    total_tip = tip_type * bill
     self.render_template('tip.html', {})
 
 def make_app():
   return tornado.web.Application([
     (r"/", MainHandler),
+    (
+      r"/static/(.*)",
+      tornado.web.StaticFileHandler,
+      {'path': 'static'}
+    ),
   ], autoreload=True)
 
 if __name__ == "__main__":

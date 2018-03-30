@@ -9,25 +9,29 @@
     </head>
     <body>
         {% block content %}
-        <div class="wrapper">
-            <h2 id="head">Tip Calculator</h2>
-            <form action="/contact" method="POST">
-                <div class="form-group">
+        <div class="jumbotron">
+            <h2 id="head">Tip Calculator</h2><br></br>
+            <span>Bill Amount :</span>
+            $ <input type="text" id="bill" class="amount-field" onchange="tipCalculate()"> <br>
+                <!-- <div class="form-group">
                     <input name= "bill" type="number" class="form-control" id="exampleFormControlInput1" placeholder="Total Amount">
-                </div>
+                </div> -->
                 <label for="exampleFormControlSelect1">Service Level</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Good</option>
-                  <option>Fair</option>
-                  <option>Bad</option>
+                <select id='service' class="form-control" id="exampleFormControlSelect1" onchange="tipCalculate()">
+                  <option value=0.2>Good</option>
+                  <option value=0.15>Fair</option>
+                  <option value=0.1>Bad</option>
                 </select>
             </div>
-            <div>
-                <button type="button" class="btn btn-secondary">Submit</button>
-            </div>
-        {{total_tip}}
+            <h3>Tip to leave = 
+                <span id="tipamount">$0.00</span>
+            </h3>   
+            <h3>Total Amount to leave = 
+                <span id="totalamount">$0.00</span>
+            </h3>          
         {% endblock %}
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="/static/js/tip.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
