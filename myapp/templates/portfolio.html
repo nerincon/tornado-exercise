@@ -1,7 +1,83 @@
 {% extends "base.html" %}
 {% block head %}
 {{ super() }}
+    <head>
+        <link rel="stylesheet" href="/static/css/portfolio.css">
+    </head>
 {% endblock %}
 {% block content %}
-Portfolio Here!
+<div class='jumbotron'>
+    <h1>Hi! I'm Nelson</h1>
+    <p>
+        These are some of the projects I have worked on!
+    </p>
+</div>
+<div>
+    <figure>
+        <img id='blackjack' src="../../static/img/blackjack.png">
+        <div class='note'>
+            <h5>Classic BlackJack Game</h5>
+            <p>
+                This project was build with HTML, CSS, Javascript, and jQuery.
+            </p>
+        </div>
+        <figcaption><a role="button" target="_blank" href="https://github.com/nerincon/blackjack_game" class="btn btn-outline-success web">Go to Github</a></figcaption>
+    </figure>
+    <figure>
+        <img id='campground' src="../../static/img/camp.png">
+        <div class='note'>
+            <h5>Campground Project</h5>
+            <p>
+                This project was build with Node.js, Express, Mongodb, Javascript, EJS, CSS.
+            </p>
+        </div>
+        <figcaption><a role="button" target="_blank" href="https://github.com/nerincon/YelpCamp" class="btn btn-outline-success web">Go to Github</a></figcaption>
+    </figure>
+    <figure>
+        <img id='wav3' src="../../static/img/wav3.png">
+        <div class='note'>
+            <h5>Wav3space</h5>
+            <p>
+                This project was build with Node.js, Express, Postgresql, React/Redux.
+            </p>
+        </div>
+        <figcaption><a role="button" target="_blank" href="https://github.com/nerincon/Wav3space" class="btn btn-outline-success web">Go to Github</a></figcaption>
+    </figure>
+    <figure>
+        <img id='weather' src="../../static/img/weather.png">
+        <div class='note'>
+            <h5>Weather</h5>
+            <p>
+                This project was build with Python, Tornado, HTML, CSS.
+            </p>
+        </div>
+        <figcaption><a role="button" target="_blank" href="https://github.com/nerincon/WeatherApp" class="btn btn-outline-success web">Go to Github</a></figcaption>
+    </figure>
+    <figure>
+        <img id='crm' src="../../static/img/crm.png">
+        <div class='note'>
+            <h5>Insurance</h5>
+            <p>
+                This project was build with Python, Tornado, Javascript, HTML, CSS.
+            </p>
+        </div>
+        <figcaption><a role="button" target="_blank" href="https://github.com/nerincon/group_p_kappa" class="btn btn-outline-success web">Go to Github</a></figcaption>
+    </figure>
+</div>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark foot">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 linkicons">
+                <li class="nav-item resumelinks">
+                    <span style="color: Dodgerblue;">
+                        <i id='github' class="fab fa-github fa-2x"></i>
+                    </span>
+                </li>
+                <li class="nav-item link resumelinks">
+                    <span style="color: Dodgerblue;">
+                        <i id='linkedin' class="fab fa-linkedin fa-2x"></i>
+                    </span>
+                </li>
+            </ul>
+    </nav>
+</div>
 {% endblock %}

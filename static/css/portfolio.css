@@ -1,0 +1,79 @@
+img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 245px;
+    height: 220px;  
+    margin: 5rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-radius: 3px;
+    display: inline-block;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.note {
+    display: inline-block;
+    position: absolute;
+    margin-top: 5rem;
+}
+
+p {
+    position: relative;
+}
+
+.jumbotron {
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 4rem;
+    position: relative;
+    background-color: lightblue;
+}
+
+.jumbotron:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.web {
+    margin-left: 9rem;
+    font-weight: bold;
+}
+
+.git {
+    margin-left: 9.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+.foot {
+    margin-top: 5rem;
+}
+
+.linkicons {
+    margin-left: 45%;
+}
+
+i:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.resumelinks {
+    padding-left: 15px;
+}
+
+.fa-lg {
+    margin-top: 10px;
+}
