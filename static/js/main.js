@@ -14,10 +14,4 @@ $(document).ready(function () {
   $('#crm').click(function () {
     window.open('https://kappacrm.herokuapp.com/', '_blank')
   })
-  $('#github').click(function () {
-    window.open('https://github.com/nerincon', '_blank')
-  })
-  $('#linkedin').click(function () {
-    window.open('https://www.linkedin.com/in/nelson-rincon-52314725/', '_blank')
-  })
 })

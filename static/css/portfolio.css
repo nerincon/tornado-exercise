@@ -32,13 +32,12 @@ p {
     margin-bottom: 5rem;
     margin-left: 5rem;
     margin-right: 5rem;
-    margin-top: 4rem;
-    position: relative;
-    background-color: lightblue;
+    margin-top: 10rem;
+    background-color: #f5f8fa;
 }
 
 .jumbotron:hover {
-    background-color: dodgerblue;
+    background-color: rgb(212, 240, 250);
     color: white;
 }
 
@@ -70,10 +69,40 @@ i:hover {
     cursor: pointer;
 }
 
-.resumelinks {
-    padding-left: 15px;
-}
-
 .fa-lg {
     margin-top: 10px;
+}
+
+.skills {
+    margin-left: 30px;
+}
+
+#tornado {
+    width: 108px;
+    height: 70px;
+    margin: 0;
+    top: -28px;
+    margin-left: 15px;
+}
+
+#redux {
+    width: 70px;
+    height: 60px;
+    margin: 0;
+    top: -28px;
+    margin-left: 20px;
+}
+
+#office {
+    width: 90px;
+    height: 62px;
+    margin: 0;
+    top: -25px;
+    margin-left: 20px;
+}
+
+#footer {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgba(0,0,0,.125);
 }
