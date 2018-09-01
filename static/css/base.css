@@ -1,0 +1,32 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+#w1 {
+    font-weight: 500;
+    padding: 8px;
+}
+
+#github {
+    margin-left: 30px;
+    margin-top: 12px;
+    padding: 0;
+}
+
+#linkedin {
+    margin-left: 30px;
+    margin-top: 12px;
+    margin-right: 1.2rem;
+}
+
+#resume {
+    margin-left: 30px;
+    margin-top: 12px;
+}
+
+nav {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0,0,0,.125);
+}

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  $('#tickerworth').click(function () {
+    window.open('https://tickerworth.herokuapp.com/', '_blank')
+  })
   $('#blackjack').click(function () {
     window.open('https://nerincon.github.io/blackjack_game/', '_blank')
   })
